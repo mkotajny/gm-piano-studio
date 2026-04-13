@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    /* Tło */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('assets/landing-page/background.png') no-repeat center center/cover;
+      z-index: -2;
+    }
+
+    /* Overlay (przyciemnienie) */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* zmień np. na 0.3 lub 0.7 */
+      z-index: -1;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .main-logo img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.4);
+      padding: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      margin-bottom: 40px;
+    }
+
+    .pianist {
+      font-size: 40px;
+      animation: play 0.5s infinite alternate;
+    }
+
+    @keyframes play {
+      0% {
+        transform: rotate(-5deg) translateY(0px);
+      }
+      100% {
+        transform: rotate(5deg) translateY(-5px);
+      }
+    }
+
+    .small-logo {
+      margin-bottom: 10px;
+    }
+
+    .text {
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tło -->
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <!-- Główne logo -->
+    <div class="main-logo">
+      <img src="assets/landing-page/logo.jpg" alt="Logo">
+    </div>
+
+    <!-- Tekst -->
+    <div class="text">
+      strona w budowie
+    </div>
+  </div>
+
+</body>
+</html>
