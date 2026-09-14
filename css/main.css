@@ -11,13 +11,12 @@
 	2.Site wrapper
 	3.Hero section
 	4.Restaurant section
-	5.Menu section
-	6.Special section
-	7.Reservation section
-	8.Gallery section
-	9.Contact section
-	10.Footer
-	11.Mediaqueries
+	5.Services section
+	6.Reservation section
+	7.Gallery section
+	8.Contact section
+	9.Footer
+	10.Mediaqueries
 
 
 
@@ -336,7 +335,7 @@ h1.large {
     max-width: 30%;
 }
 /* End restaurant section*/
-/* Menu section*/
+/* Services section*/
 
 .block-tabs li {
     border-bottom: 1px solid #f2f2f2;
@@ -375,7 +374,7 @@ h1.large {
     font-size: 15px;
     margin-top: 10px;
 }
-/* End menu section*/
+/* End services section*/
 /* Review section*/
 
 .block-review {
@@ -391,101 +390,7 @@ h1.large {
     color: #ffffff;
 }
 /* End review section*/
-/* Special section*/
 
-.block-content.special {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding: 50px 130px 50px 70px !important;
-    color: #ffffff;
-    overflow: visible;
-}
-.block-special {
-    cursor: pointer;
-    position: relative;
-}
-.block-special:hover,
-.block-special.active {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    z-index: 40;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    box-shadow: 0 0 10px rgba(166, 139, 124, 0.8);
-    -webkit-box-shadow: 0 0 10px rgba(166, 139, 124, 0.8);
-    -moz-box-shadow: 0 0 10px rgba(166, 139, 124, 0.8);
-    -ms-box-shadow: 0 0 10px rgba(166, 139, 124, 0.8);
-    -o-box-shadow: 0 0 10px rgba(166, 139, 124, 0.8);
-}
-.block-special:hover .block-content.special.sp-1:after,
-.block-special.active .block-content.special.sp-1:after {
-    background: rgba(166, 139, 124, 1);
-}
-.block-special:hover .block-content.special.sp-2:after,
-.block-special.active .block-content.special.sp-2:after {
-    background: rgba(176, 152, 139, 1);
-}
-.block-special:hover .block-content.special.sp-3:after,
-.block-special.active .block-content.special.sp-3:after {
-    background: rgba(187, 166, 154, 1);
-}
-.block-content.special.sp-1 {
-    background: #a68b7c;
-}
-.block-content.special.sp-2 {
-    background: #b0988b;
-}
-.block-content.special.sp-3 {
-    background: #bba69a;
-}
-.block-content.special.sp-1,
-.block-content.special.sp-3 {
-    top: 0;
-}
-.block-content.special.sp-2 {
-    bottom: 0;
-}
-.block-content.special:after {
-    content: "";
-    width: 100%;
-    padding: 8px 0;
-    position: absolute;
-    left: 0;
-}
-.block-content.special.sp-1:after {
-    background: rgba(166, 139, 124, .85);
-    bottom: -15px;
-}
-.block-content.special.sp-2:after {
-    background: rgba(176, 152, 139, .85);
-    top: -15px;
-}
-.block-content.special.sp-3:after {
-    background: rgba(187, 166, 154, .85);
-    bottom: -15px;
-}
-.block-price.special {
-    color: #ffffff;
-    position: absolute;
-    right: 50px;
-    top: 40px;
-}
-.block-img.special {
-    height: 415px;
-}
-.special.sp-1 h2 {
-    color: #c5b3aa;
-}
-.special.sp-2 h2 {
-    color: #c9c1b9;
-}
-.special.sp-3 h2 {
-    color: #d7d2cb;
-}
-/* End special section*/
 /* Reservation section*/
 
 .block-form {
@@ -721,9 +626,6 @@ input.error {
     .title-medium {
         font-size: 17px;
     }
-    .block-content.special {
-        padding: 50px 100px 50px 50px !important;
-    }
     .main-nav li {
         font-size: 11px;
     }
@@ -747,9 +649,6 @@ input.error {
     .contact {
         padding-top: 150px !important;
         padding-bottom: 150px !important;
-    }
-    .block-content.special {
-        padding: 50px 100px 50px 50px !important;
     }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {
@@ -859,9 +758,6 @@ input.error {
     .row.vertical-align:last-child .block-img {
         margin-bottom: 30px;
     }
-    .block-price.special {
-        right: 70px;
-    }
     .review-slider .flex-control-nav,
     .review-slider .flex-direction-nav a {
         display: none;
@@ -960,9 +856,6 @@ input.error {
     .flex-control-nav,
     .flex-direction-nav a {
         display: none;
-    }
-    .block-content.special {
-        padding:50px 100px 50px 40px !important;
     }
     .block-review {
         width: auto;
