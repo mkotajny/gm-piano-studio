@@ -23,6 +23,10 @@ python -m http.server 8000
 - `img/` — photos used in the hero and gallery sliders (`1.jpg`–`13.jpg`), `marker.png` (map pin), `signature.png`, and `logo.jpg` (studio logo).
 - Google Maps is loaded via a `<script>` tag at the bottom of `index.html` with an embedded API key and `callback=initializeMap`, matching `initializeMap()` in `js/script.js`.
 
+## Komunikacja
+
+- Wszystkie odpowiedzi na czacie (tekst kierowany do użytkownika, nie treść commitów/kodu/dokumentów) mają być pisane po polsku.
+
 ## Notes
 
 - Content in `index.html` is a mix of the original English template text and real Polish content for the studio (contact info, address, hours) — when editing, match the existing language of the section you're in.
