@@ -18,10 +18,10 @@ python -m http.server 8000
 
 - `index.html` — the entire page. Sections are identified by anchor IDs matching the nav links: `#about`, `#services`, `#reservation`, `#gallery`, `#contact`. The nav (`js/smooth-scroll.js`) scrolls to these anchors.
 - `css/` — `bootstrap.css` and `base.css` are vendored framework/reset styles; `main.css` holds the actual template/site styling; `fonts.css` declares the custom `@font-face` rules (fonts live in `font/`); `flexslider.css` styles the image sliders.
-- `js/script.js` — all page behavior: preloader fade-out, hero slider height, header style swap on scroll, mobile nav toggle, `.background-img` → CSS background conversion (used for the parallax hero/gallery images), tab and hover interactions, jQuery Validate setup for the reservation form, and `initializeMap()` for the Google Maps contact section (styled map, marker at the studio's coordinates).
+- `js/script.js` — all page behavior: preloader fade-out, hero slider height, header style swap on scroll, mobile nav toggle, `.background-img` → CSS background conversion (used for the parallax hero/gallery images), tab and hover interactions, jQuery Validate setup for the reservation form.
 - `js/jquery-1.12.4.min.js`, `jquery.flexslider-min.js`, `jquery.validate.min.js`, `placeholders.min.js`, `smooth-scroll.js` — third-party vendored libraries; do not edit these.
-- `img/` — photos used in the hero and gallery sliders (`1.jpg`–`13.jpg`), `marker.png` (map pin), `signature.png`, and `logo.jpg` (studio logo).
-- Google Maps is loaded via a `<script>` tag at the bottom of `index.html` with an embedded API key and `callback=initializeMap`, matching `initializeMap()` in `js/script.js`.
+- `img/` — photos used in the hero and gallery sliders (`1.jpg`–`13.jpg`), `signature.png`, and `logo.jpg` (studio logo).
+- The `#contact` section map is a Google Maps Embed `<iframe>` (`src="https://www.google.com/maps/embed?..."`) — no API key, no JS initialization.
 
 ## Komunikacja
 
