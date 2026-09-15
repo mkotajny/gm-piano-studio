@@ -111,15 +111,25 @@
 
 
 
-    // Append images as css background
+    // Append images as css background, fading each one in only once it has fully loaded
 
     for (var i = 0; i < $('.background-img').length; i++) {
 
-        var path = $('.background-img').eq(i).children('img').attr('src');
-        $('.background-img').eq(i).css('background', 'url("' + path + '")');
-        $('.background-img').eq(i).addClass('parallax');
-        $('.background-img').eq(i).children('img').detach();
-        $('.background-img').eq(i).css('background-position', 'initial');
+        var el = $('.background-img').eq(i);
+        var path = el.children('img').attr('src');
+        el.addClass('parallax');
+        el.children('img').detach();
+        el.css('background-position', 'initial');
+
+        var preload = new Image();
+        preload.onload = function(el, path) {
+            return function() {
+                el.css('background', 'url("' + path + '")');
+                el[0].offsetHeight; // force reflow so the opacity transition reliably fires
+                el.addClass('loaded');
+            };
+        }(el, path);
+        preload.src = path;
 
     }
 
