@@ -418,11 +418,11 @@ h1.large {
 
 .block-form {
     background: #ffffff;
-    padding: 60px;
+    padding: 30px 60px;
     border: 1px solid #ececec;
 }
 .block-input {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .block-input label {
     margin-bottom: 15px;
@@ -481,6 +481,19 @@ input[type]:focus {
     -moz-appearance: none;
     appearance: none;
     cursor: pointer;
+}
+.reservation-form textarea {
+    background: #fcfcfc;
+    border: 1px solid #ececec;
+    outline: 0 none;
+    padding: 12px 15px;
+    resize: vertical;
+    width: 100%;
+    border-radius: 6px;
+    font-family: inherit;
+}
+.reservation-form textarea:focus {
+    border: 1px solid #a68b7c;
 }
 
 input.error {
