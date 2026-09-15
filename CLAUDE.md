@@ -32,3 +32,4 @@ python -m http.server 8000
 - Content in `index.html` is a mix of the original English template text and real Polish content for the studio (contact info, address, hours) — when editing, match the existing language of the section you're in.
 - The `<title>` and some template scaffolding (e.g. the DOCUMENTATION folder, `LICENSE/` files) still reference the original "Tasty" template; this is vendor documentation, not part of the live site.
 - Do not attempt to automatically test the visual/functional effects of changes in a browser (e.g. launching headless Chrome, driving it via CDP/Playwright/Selenium, taking screenshots). The user always tests changes manually/visually themselves. Reason about CSS/HTML/JS statically instead, and let the user verify in-browser.
+- Never create git commits in this repository, even if asked to summarize/finish work — the user handles all commits themselves. Only commit if the user explicitly asks you to commit.

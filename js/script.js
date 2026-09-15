@@ -69,6 +69,7 @@
     $('.review-slider').flexslider({
         animation: "slide",
         slideshow: true,
+        slideshowSpeed: 15000,
         directionNav: true,
         controlNav: false,
         pauseOnAction: false,
