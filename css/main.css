@@ -474,6 +474,14 @@ input[type]:focus {
     height: 42px;
     line-height: 0;
 }
+.reservation-form button.but {
+    border: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
 
 input.error {
     border: 1px solid #353031 !important;

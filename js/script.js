@@ -159,36 +159,6 @@
     });
 
 
-    // Form validation 
-
-    var reservationForm = $('.reservation-form');
-    reservationForm.validate({
-        validClass: 'valid',
-        errorClass: 'error',
-        errorPlacement: function(error, element) {
-            return true;
-        },
-        onfocusout: function(element, event) {
-            $(element).valid();
-        },
-        rules: {
-            email: {
-                required: true,
-                email: true
-            }
-        },
-
-        rules: {
-            name: {
-                required: true,
-                minlength: 3
-            }
-        }
-
-
-    });
-
-
 })(jQuery);
 
 

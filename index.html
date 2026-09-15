@@ -461,11 +461,8 @@
                <!--Row-->
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2 text-center mb-100">
-                     <h1 class="title">reservation</h1>
-                     <p class="beige">Book a table</p>
-                     <p class="title-lead  mt-20">Please choose your reservation date with specific time and number<br> 
-                        of people to book a table
-                     </p>
+                     <h1 class="title">Formularz Kontaktowy</h1>
+                     <p class="title-lead  mt-20">Zostaw swoje dane, a oddzwonię lub napiszę.</p>
                   </div>
                </div>
                <!--End row-->
@@ -477,74 +474,31 @@
                <div class="row">
                   <div class="col-sm-8 col-sm-offset-2">
                      <div class="block-form">
-                        <form class="reservation-form " method="post" action="send.php">
+                        <form name="formularz-kontaktowy" class="reservation-form " method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/form-submission-confirmation.html">
+                           <input type="hidden" name="form-name" value="formularz-kontaktowy">
+                           <input type="hidden" name="subject" value="Nowa wiadomość z formularza kontaktowego — GM Piano Studio">
+                           <p style="display:none">
+                              <label>Nie wypełniaj tego pola, jeśli jesteś człowiekiem: <input name="bot-field"></label>
+                           </p>
                            <div class="block-input ico-input">
                               <i class="icon-user-1"></i>
-                              <label>Your name:</label>
+                              <label>Imię i nazwisko:</label>
                               <input  id="name" name="name" type="text" required>
                            </div>
                            <div class="block-input ico-input">
                               <i class="icon-phone"></i>
-                              <label>Your Phone:</label>
-                              <input  id="phone" name="phone" type="text">
+                              <label>Telefon:</label>
+                              <input  id="phone" name="phone" type="tel" pattern="^(\d{3} ?\d{3} ?\d{3})$" title="Wprowadź 9 cyfr, np. 123 456 789 lub 123456789">
                            </div>
                            <div class="block-input ico-input">
                               <i class="icon-mail-1"></i>
-                              <label>Your Email:</label>
-                              <input  id="email" name="email" type="text">
+                              <label>Adres e-mail:</label>
+                              <input  id="email" name="email" type="email" required>
                            </div>
-                           <!--Input columns-->
-                           <div class="input-columns block-input clearfix">
-                              <div class="column-1">
-                                 <div class="column-inner">
-                                    <label>Number of person :  </label>
-                                    <input   id="person" min="1" name="person"  type="number" required>
-                                 </div>
-                              </div>
-                              <!--Column-->
-                              <div class="column-2">
-                                 <div class="column-inner">
-                                    <label>Type of table:</label>
-                                    <input   id="table" min="1" name="table" type="number" required>
-                                 </div>
-                              </div>
-                              <!--End column-->
+                           <div class="text-center">
+                              <button class="but" type="submit">Wyślij zgłoszenie</button>
                            </div>
-                           <!--End input columns-->
-                           <!--Input columns-->
-                           <div class="input-columns block-input clearfix">
-                              <div class="column-1">
-                                 <div class="column-inner ico-input">
-                                    <i class="icon-calendar"></i>
-                                    <label>Date :  </label>
-                                    <input  class="date" id="date" name="date" type="date" required>
-                                 </div>
-                              </div>
-                              <!--Column-->
-                              <div class="column-2">
-                                 <div class="column-inner ico-input">
-                                    <i class="icon-clock"></i>
-                                    <label>Time:</label>
-                                    <input   placeholder="(ex: 7:00 p.m)"  id="time" name="time" type="text" required>
-                                 </div>
-                              </div>
-                              <!--End column-->
-                           </div>
-                           <!--End input columns-->
-                           <button  class=" but submit" type="submit">Boook a table</button>
-
-							 <!--Contact form message-->
-                               <div class="success-msg">
-                                  <h2>Your message has been sent. Thank you!</h2>
-                               </div>
-                               <div class="error-msg">
-                                  <h2>Sorry your message can not be sent.</h2>
-                               </div>
-                               <!--End contact form message-->
-
-						
                         </form>
-                
                      </div>
                   </div>
                </div>
@@ -625,8 +579,6 @@
       <script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
       <script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
       <script src="js/smooth-scroll.js" type="text/javascript"></script>
-	  <script src="js/jquery.validate.min.js" type="text/javascript"></script>
-	  <script src="js/placeholders.min.js" type="text/javascript"></script>
       <script src="js/script.js" type="text/javascript"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbGQXiGt-6UAmOFFdSzYI-byeE7ewBuVM&callback=initializeMap"></script>
       <!-- Google analytics -->
