@@ -17,6 +17,8 @@
 
     function mainHeroResize() {
         $(".main-slider .slides li").css('height', $(window).height());
+        // Gallery fills the viewport below the scroll offset (see smoothScroll offset: -57)
+        $(".gallery-slider .slides li").css('height', $(window).height() - 57);
     }
 
     $(function() {
